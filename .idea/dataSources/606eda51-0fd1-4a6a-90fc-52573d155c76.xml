@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="@localhost">
-  <database-model serializer="dbm" rdbms="ORACLE" format-version="4.0">
+  <database-model serializer="dbm" rdbms="ORACLE" format-version="4.1">
     <root id="1"/>
     <schema id="2" parent="1" name="SYSTEM">
       <ObjectId>5</ObjectId>
@@ -680,7 +680,7 @@
     </table>
     <table id="134" parent="2" name="MVIEW$_ADV_FJG">
       <ObjectId>4205</ObjectId>
-      <Comment>Representation for query join sub-graph not in AJG </Comment>
+      <Comment>Representation for query join sub-graph not in AJG</Comment>
       <CreatedTimestamp>2014-05-29.13:11:16</CreatedTimestamp>
       <ModifiedTimestamp>2014-05-29.13:11:16</ModifiedTimestamp>
     </table>
@@ -1270,7 +1270,7 @@ DB_USERNAME</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefTableName>AQ$_INTERNET_AGENTS</RefTableName>
       <RefKeyName>SYS_C001694</RefKeyName>
-      <OnDelete>delete</OnDelete>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <column id="233" parent="41" name="OID">
       <Position>1</Position>
@@ -1856,7 +1856,7 @@ CATCHUP</ColNames>
       <Comment>Value of delivery_order of last transaction propagated</Comment>
       <DataType>NUMBER(*)|0</DataType>
       <NotNull>1</NotNull>
-      <DefaultExpression>0 </DefaultExpression>
+      <DefaultExpression>0</DefaultExpression>
     </column>
     <column id="346" parent="48" name="LAST_ENQ_TID">
       <Position>3</Position>
@@ -2148,7 +2148,7 @@ CATCHUP</ColNames>
       <Comment>The time when the propagator is registered</Comment>
       <DataType>DATE|0</DataType>
       <NotNull>1</NotNull>
-      <DefaultExpression>SYSDATE </DefaultExpression>
+      <DefaultExpression>SYSDATE</DefaultExpression>
     </column>
     <index id="397" parent="52" name="DEF$_PROPAGATOR_PRIMARY">
       <ObjectId>6949</ObjectId>
@@ -6264,7 +6264,7 @@ USER#</ColNames>
       <Position>8</Position>
       <DataType>NUMBER(*)|0</DataType>
       <NotNull>1</NotNull>
-      <DefaultExpression>(0) </DefaultExpression>
+      <DefaultExpression>(0)</DefaultExpression>
     </column>
     <column id="1248" parent="114" name="SPARE1">
       <Position>9</Position>
@@ -8338,7 +8338,7 @@ DATA_TYPE_ID</ColNames>
                   data_length is not null)
               or (data_type_id not in (2, 4, 5, 6, 7) and
                   data_length is null)
-                 </Predicate>
+</Predicate>
     </check>
     <check id="1670" parent="155" name="REPCAT$_AUDIT_ATTRIBUTE_NN2">
       <ModifiedTimestamp>2014-05-29.13:11:52</ModifiedTimestamp>
@@ -8646,7 +8646,7 @@ MASTER</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefTableName>REPCAT$_REPCATLOG</RefTableName>
       <RefKeyName>REPCAT$_REPCATLOG_PRIMARY</RefKeyName>
-      <OnDelete>delete</OnDelete>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <column id="1716" parent="160" name="EXCEPTION_ID">
       <Position>1</Position>
@@ -8903,7 +8903,7 @@ GOWNER</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefTableName>REPCAT$_REPCAT</RefTableName>
       <RefKeyName>REPCAT$_REPCAT_PRIMARY</RefKeyName>
-      <OnDelete>delete</OnDelete>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <check id="1759" parent="162" name="REPCAT$_FLAVORS_C2">
       <ModifiedTimestamp>2014-05-29.13:11:48</ModifiedTimestamp>
@@ -9021,7 +9021,7 @@ GOWNER</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefTableName>REPCAT$_FLAVORS</RefTableName>
       <RefKeyName>REPCAT$_FLAVORS_UNQ1</RefKeyName>
-      <OnDelete>delete</OnDelete>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <foreign-key id="1775" parent="163" name="REPCAT$_FLAVOR_OBJECTS_FK1">
       <ModifiedTimestamp>2014-05-29.13:11:52</ModifiedTimestamp>
@@ -9030,7 +9030,7 @@ GOWNER</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefTableName>REPCAT$_REPCAT</RefTableName>
       <RefKeyName>REPCAT$_REPCAT_PRIMARY</RefKeyName>
-      <OnDelete>delete</OnDelete>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <check id="1776" parent="163" name="REPCAT$_FLAVOR_OBJECTS_VERSION">
       <ModifiedTimestamp>2014-05-29.13:11:52</ModifiedTimestamp>
@@ -9144,7 +9144,7 @@ TYPE</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefTableName>REPCAT$_REPOBJECT</RefTableName>
       <RefKeyName>REPCAT$_REPOBJECT_PRIMARY</RefKeyName>
-      <OnDelete>delete</OnDelete>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <foreign-key id="1792" parent="164" name="REPCAT$_REPGEN_PRNT2">
       <ModifiedTimestamp>2014-05-29.13:11:49</ModifiedTimestamp>
@@ -9154,7 +9154,7 @@ BASE_TYPE</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefTableName>REPCAT$_REPOBJECT</RefTableName>
       <RefKeyName>REPCAT$_REPOBJECT_PRIMARY</RefKeyName>
-      <OnDelete>delete</OnDelete>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <check id="1793" parent="164" name="REPCAT$_GENERATED_OBJ">
       <ModifiedTimestamp>2014-05-29.13:11:49</ModifiedTimestamp>
@@ -9280,7 +9280,7 @@ DDL_NUM</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefTableName>REPCAT$_REFRESH_TEMPLATES</RefTableName>
       <RefKeyName>REPCAT$_REFRESH_TEMPLATES_PK</RefKeyName>
-      <OnDelete>delete</OnDelete>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <column id="1810" parent="167" name="SNAME">
       <Position>1</Position>
@@ -9341,7 +9341,7 @@ TYPE</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefTableName>REPCAT$_REPOBJECT</RefTableName>
       <RefKeyName>REPCAT$_REPOBJECT_PRIMARY</RefKeyName>
-      <OnDelete>delete</OnDelete>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <column id="1818" parent="168" name="TEMPLATE_PARAMETER_ID">
       <Position>1</Position>
@@ -9392,7 +9392,7 @@ TEMPLATE_OBJECT_ID</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefTableName>REPCAT$_TEMPLATE_OBJECTS</RefTableName>
       <RefKeyName>REPCAT$_TEMPLATE_OBJECTS_PK</RefKeyName>
-      <OnDelete>delete</OnDelete>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <column id="1825" parent="169" name="OBJECT_TYPE_ID">
       <Position>1</Position>
@@ -9790,21 +9790,21 @@ FIXED_DATA_LENGTH</ColNames>
       <Comment>Internal primary key to default refresh group for the template.</Comment>
       <DataType>NUMBER(*)|0</DataType>
       <NotNull>1</NotNull>
-      <DefaultExpression>0 </DefaultExpression>
+      <DefaultExpression>0</DefaultExpression>
     </column>
     <column id="1886" parent="173" name="TEMPLATE_TYPE_ID">
       <Position>12</Position>
       <Comment>Internal primary key to the template types.</Comment>
       <DataType>NUMBER(*)|0</DataType>
       <NotNull>1</NotNull>
-      <DefaultExpression>1 </DefaultExpression>
+      <DefaultExpression>1</DefaultExpression>
     </column>
     <column id="1887" parent="173" name="TEMPLATE_STATUS_ID">
       <Position>13</Position>
       <Comment>Internal primary key to the template status table.</Comment>
       <DataType>NUMBER(*)|0</DataType>
       <NotNull>1</NotNull>
-      <DefaultExpression>0 </DefaultExpression>
+      <DefaultExpression>0</DefaultExpression>
     </column>
     <column id="1888" parent="173" name="FLAGS">
       <Position>14</Position>
@@ -10248,7 +10248,7 @@ TYPE</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefTableName>REPCAT$_REPOBJECT</RefTableName>
       <RefKeyName>REPCAT$_REPOBJECT_PRIMARY</RefKeyName>
-      <OnDelete>delete</OnDelete>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <check id="1962" parent="176" name="REPCAT$_REPCOLUMN_VERSION">
       <ModifiedTimestamp>2014-05-29.13:11:49</ModifiedTimestamp>
@@ -10334,7 +10334,7 @@ GOWNER</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefTableName>REPCAT$_REPCAT</RefTableName>
       <RefKeyName>REPCAT$_REPCAT_PRIMARY</RefKeyName>
-      <OnDelete>delete</OnDelete>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <column id="1975" parent="178" name="SNAME">
       <Position>1</Position>
@@ -10460,7 +10460,7 @@ GOWNER</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefTableName>REPCAT$_REPCAT</RefTableName>
       <RefKeyName>REPCAT$_REPCAT_PRIMARY</RefKeyName>
-      <OnDelete>delete</OnDelete>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <check id="1995" parent="178" name="REPCAT$_REPOBJECT_TYPE">
       <ModifiedTimestamp>2014-05-29.13:11:48</ModifiedTimestamp>
@@ -10602,7 +10602,7 @@ TYPE</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefTableName>REPCAT$_REPOBJECT</RefTableName>
       <RefKeyName>REPCAT$_REPOBJECT_PRIMARY</RefKeyName>
-      <OnDelete>delete</OnDelete>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <check id="2016" parent="179" name="REPCAT$_REPPROP_HOW">
       <ModifiedTimestamp>2014-05-29.13:11:49</ModifiedTimestamp>
@@ -10707,7 +10707,7 @@ GOWNER</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefTableName>REPCAT$_REPCAT</RefTableName>
       <RefKeyName>REPCAT$_REPCAT_PRIMARY</RefKeyName>
-      <OnDelete>delete</OnDelete>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <foreign-key id="2032" parent="180" name="REPCAT$_REPSCHEMA_DEST">
       <ModifiedTimestamp>2014-05-29.13:11:48</ModifiedTimestamp>
@@ -11151,7 +11151,7 @@ DBLINK</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefTableName>REPCAT$_EXTENSION</RefTableName>
       <RefKeyName>SYS_C003081</RefKeyName>
-      <OnDelete>delete</OnDelete>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <foreign-key id="2100" parent="186" name="REPCAT$_SITES_NEW_FK2">
       <ModifiedTimestamp>2014-05-29.13:11:53</ModifiedTimestamp>
@@ -11160,7 +11160,7 @@ GOWNER</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefTableName>REPCAT$_REPCAT</RefTableName>
       <RefKeyName>REPCAT$_REPCAT_PRIMARY</RefKeyName>
-      <OnDelete>delete</OnDelete>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <check id="2101" parent="186" name="REPCAT$_SITES_NEW_FULL_INST">
       <ModifiedTimestamp>2014-05-29.13:11:53</ModifiedTimestamp>
@@ -11223,7 +11223,7 @@ SNAME</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefTableName>REPCAT$_TEMPLATE_SITES</RefTableName>
       <RefKeyName>REPCAT$_TEMPLATE_SITES_PK</RefKeyName>
-      <OnDelete>delete</OnDelete>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <foreign-key id="2110" parent="187" name="REPCAT$_SITE_OBJECTS_FK1">
       <ModifiedTimestamp>2014-05-29.13:11:53</ModifiedTimestamp>
@@ -11336,14 +11336,14 @@ GOWNER</ColNames>
       <Comment>Order of ddls to execute.</Comment>
       <DataType>NUMBER(*)|0</DataType>
       <NotNull>1</NotNull>
-      <DefaultExpression>1 </DefaultExpression>
+      <DefaultExpression>1</DefaultExpression>
     </column>
     <column id="2130" parent="189" name="TEMPLATE_REFGROUP_ID">
       <Position>13</Position>
       <Comment>Internal ID of the refresh group to contain the object.</Comment>
       <DataType>NUMBER(*)|0</DataType>
       <NotNull>1</NotNull>
-      <DefaultExpression>0 </DefaultExpression>
+      <DefaultExpression>0</DefaultExpression>
     </column>
     <column id="2131" parent="189" name="FLAGS">
       <Position>14</Position>
@@ -11416,7 +11416,7 @@ DDL_NUM</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefTableName>REPCAT$_REFRESH_TEMPLATES</RefTableName>
       <RefKeyName>REPCAT$_REFRESH_TEMPLATES_PK</RefKeyName>
-      <OnDelete>delete</OnDelete>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <foreign-key id="2140" parent="189" name="REPCAT$_TEMPLATE_OBJECTS_FK3">
       <ModifiedTimestamp>2014-05-29.13:11:53</ModifiedTimestamp>
@@ -11501,7 +11501,7 @@ PARAMETER_NAME</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefTableName>REPCAT$_REFRESH_TEMPLATES</RefTableName>
       <RefKeyName>REPCAT$_REFRESH_TEMPLATES_PK</RefKeyName>
-      <OnDelete>delete</OnDelete>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <check id="2153" parent="190" name="REPCAT$_TEMPLATE_PARMS_C1">
       <ModifiedTimestamp>2014-05-29.13:11:53</ModifiedTimestamp>
@@ -11576,7 +11576,7 @@ PARAMETER_NAME</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefTableName>REPCAT$_REFRESH_TEMPLATES</RefTableName>
       <RefKeyName>REPCAT$_REFRESH_TEMPLATES_PK</RefKeyName>
-      <OnDelete>delete</OnDelete>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <column id="2165" parent="192" name="TEMPLATE_SITE_ID">
       <Position>1</Position>
@@ -11859,7 +11859,7 @@ REFRESH_TEMPLATE_ID</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefTableName>REPCAT$_REFRESH_TEMPLATES</RefTableName>
       <RefKeyName>REPCAT$_REFRESH_TEMPLATES_PK</RefKeyName>
-      <OnDelete>delete</OnDelete>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <column id="2209" parent="197" name="USER_PARAMETER_ID">
       <Position>1</Position>
@@ -11921,7 +11921,7 @@ USER_ID</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <RefTableName>REPCAT$_TEMPLATE_PARMS</RefTableName>
       <RefKeyName>REPCAT$_TEMPLATE_PARMS_PK</RefKeyName>
-      <OnDelete>delete</OnDelete>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <column id="2218" parent="198" name="PRODUCT">
       <Position>1</Position>
