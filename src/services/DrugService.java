@@ -1,3 +1,5 @@
+package services;
+
 import entities.DrugsEntity;
 
 import javax.persistence.EntityManager;
@@ -8,7 +10,7 @@ import java.util.List;
 /**
  * Created by Andrew on 21.03.2017.
  */
-public class Service {
+public class DrugService {
     public EntityManager em = Persistence.createEntityManagerFactory("NewPersistenceUnit").createEntityManager();
 
     public DrugsEntity add(DrugsEntity de){
@@ -27,9 +29,9 @@ public class Service {
         em.getTransaction().commit();
     }
 
-    public void update(DrugsEntity car){
+    public void update(DrugsEntity de){
         em.getTransaction().begin();
-        em.merge(car);
+        em.merge(de);
         em.getTransaction().commit();
     }
 
