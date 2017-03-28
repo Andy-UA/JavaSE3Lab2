@@ -1,8 +1,5 @@
 package entities;
 
-import org.hibernate.annotations.*;
-import org.hibernate.annotations.CascadeType;
-
 import javax.persistence.*;
 import javax.persistence.Entity;
 import javax.persistence.NamedQuery;

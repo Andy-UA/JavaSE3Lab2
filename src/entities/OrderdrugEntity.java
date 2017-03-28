@@ -1,12 +1,12 @@
 package entities;
 
 import javax.persistence.*;
-
 /**
  * Created by Andrew on 20.03.2017.
  */
 @Entity
 @Table(name = "ORDERDRUG", schema = "SYSTEM", catalog = "")
+@NamedQuery(name = "OrderdrugEntity.getAll", query = "SELECT c from OrderdrugEntity c")
 public class OrderdrugEntity {
     private long orderdrugid;
     private int totalcost;

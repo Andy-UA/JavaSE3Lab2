@@ -9,6 +9,7 @@ import java.util.Set;
  */
 @Entity
 @Table(name = "MEDIC", schema = "SYSTEM", catalog = "")
+@NamedQuery(name = "MedicEntity.getAll", query = "SELECT c from MedicEntity c")
 public class MedicEntity {
     private long medicid;
     private String name;

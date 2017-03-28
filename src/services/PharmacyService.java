@@ -36,7 +36,7 @@ public class PharmacyService {
     }
 
     public List<PharmacyEntity> getAll(){
-        TypedQuery<PharmacyEntity> namedQuery = em.createNamedQuery("DrugsEntity.getAll", PharmacyEntity.class);
+        TypedQuery<PharmacyEntity> namedQuery = em.createNamedQuery("PharmacyEntity.getAll", PharmacyEntity.class);
         return namedQuery.getResultList();
     }
 }
