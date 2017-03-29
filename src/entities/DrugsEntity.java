@@ -1,9 +1,8 @@
 package entities;
 
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
 import javax.persistence.*;
-import javax.persistence.Entity;
-import javax.persistence.NamedQuery;
-import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
@@ -11,6 +10,8 @@ import java.util.Set;
 /**
  * Created by Andrew on 20.03.2017.
  */
+@ManagedBean
+@SessionScoped
 @Entity
 @Table(name = "DRUGS", schema = "SYSTEM", catalog = "")
 @NamedQuery(name = "DrugsEntity.getAll", query = "SELECT c from DrugsEntity c")
@@ -72,7 +73,7 @@ public class DrugsEntity implements Serializable{
         return result;
     }
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "drugsEntity")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "drugsEntity", targetEntity = OrderdrugEntity.class)
     public Set<OrderdrugEntity> getOrderdrugEntities() {
         return orderdrugEntities;
     }

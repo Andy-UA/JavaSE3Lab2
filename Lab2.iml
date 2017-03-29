@@ -44,5 +44,7 @@
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 7.0.75" level="application_server_libraries" />
     <orderEntry type="library" name="com.google.code.gson:gson:2.8.0" level="project" />
     <orderEntry type="library" name="ojdbc6" level="project" />
+    <orderEntry type="library" name="javax.faces:javax.faces-api:2.2" level="project" />
+    <orderEntry type="library" name="OpenFaces-3.0" level="project" />
   </component>
 </module>

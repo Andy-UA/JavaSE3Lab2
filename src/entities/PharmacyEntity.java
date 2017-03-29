@@ -1,5 +1,7 @@
 package entities;
 
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
@@ -7,6 +9,8 @@ import java.util.Set;
 /**
  * Created by Andrew on 20.03.2017.
  */
+@ManagedBean
+@SessionScoped
 @Entity
 @Table(name = "PHARMACY", schema = "SYSTEM", catalog = "")
 @NamedQuery(name = "PharmacyEntity.getAll", query = "SELECT c from PharmacyEntity c")

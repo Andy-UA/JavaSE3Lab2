@@ -5,6 +5,7 @@ import entities.DrugsEntity;
 import services.DrugService;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -13,7 +14,7 @@ import java.util.List;
 /**
  * Created by Andrew on 28.03.2017.
  */
-
+@WebServlet(name = "DrugServlet")
 public class DrugServlet extends javax.servlet.http.HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

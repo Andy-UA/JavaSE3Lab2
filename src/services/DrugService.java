@@ -2,6 +2,8 @@ package services;
 
 import entities.DrugsEntity;
 
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
@@ -10,6 +12,8 @@ import java.util.List;
 /**
  * Created by Andrew on 21.03.2017.
  */
+@ManagedBean
+@SessionScoped
 public class DrugService {
     public EntityManager em = Persistence.createEntityManagerFactory("NewPersistenceUnit").createEntityManager();
 

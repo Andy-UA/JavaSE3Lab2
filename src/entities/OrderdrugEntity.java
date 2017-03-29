@@ -1,9 +1,13 @@
 package entities;
 
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
 import javax.persistence.*;
 /**
  * Created by Andrew on 20.03.2017.
  */
+@ManagedBean
+@SessionScoped
 @Entity
 @Table(name = "ORDERDRUG", schema = "SYSTEM", catalog = "")
 @NamedQuery(name = "OrderdrugEntity.getAll", query = "SELECT c from OrderdrugEntity c")
@@ -55,8 +59,8 @@ public class OrderdrugEntity {
         return result;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "DRUGSID", nullable = false)
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "DRUGSID", referencedColumnName = "DRUGSID")
     public DrugsEntity getDrugsEntity() {
         return drugsEntity;
     }
