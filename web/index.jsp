@@ -42,7 +42,7 @@
                 var id = grid.dataItem(grid.select()).drugsid;
                 var request = $.ajax({
                     type: "DELETE",
-                    url: "/UserDrug/id="+id,
+                    url: "/DrugServlet/id="+id,
                     dataType: "application/json"
                 });
 
