@@ -16,6 +16,9 @@
           <element id="library" level="project" name="OpenFaces-3.0" />
         </element>
       </element>
+      <element id="directory" name="archive">
+        <element id="archive" name="archive.war" />
+      </element>
     </root>
   </artifact>
 </component>
